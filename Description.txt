@@ -1,0 +1,6 @@
+This is a description for the repository.
+    In the repository we are exploring Leetcode problems and practicing the codes focusing on Data Structures and Algorithm.
+
+    Language to be Used : Python.
+
+    
