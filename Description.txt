@@ -3,4 +3,9 @@ This is a description for the repository.
 
     Language to be Used : Python.
 
-    
+    Structure/Division :    
+        Major Subdivisions:
+                            1. Blind 75
+                            2. Neetcode 150
+                            3. NeetCode All
+                            
