@@ -11,7 +11,7 @@ class Solution:
         while len(stones) > 1:
             first  = heapq.heappop(stones)
             second = heapq.heappop(stones)
-            if second > first # as we are using -ve
-            heapq.heappush(stones, first - second)  
+            if second > first: # as we are using negative
+                heapq.heappush(stones, first - second)  
         stones.append(0)
         return abs(stones[0])   
