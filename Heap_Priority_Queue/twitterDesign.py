@@ -32,7 +32,7 @@ class Twitter:
             res.append(tweetId)
             if index >= 0:
                 count, tweetId = self.tweetMap[followeeId][index]
-                heapq.heappush(min, [count, tweetId, followeeId, index-1])
+                heapq.heappush(minHeap, [count, tweetId, followeeId, index-1])
         return res            
     
     def follow(self, followerId: int, followeeId: int) -> None:
