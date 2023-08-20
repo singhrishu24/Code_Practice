@@ -16,6 +16,6 @@ class Solution:
 
             for perm in perms:
                 perm.append(n)
-            res.extends(perms)
+            res.extend(perms)
             nums.append(n)
         return res        
