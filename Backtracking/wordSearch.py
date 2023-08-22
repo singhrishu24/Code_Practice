@@ -9,8 +9,10 @@ class Solution:
         path = set()
 
         def dfs(r, c, i):
+            # Base Case
             if i == len(word):
                 return True
+            # out of bounds conditions
             if (
                 min(r, c) < 0
                 or r >= ROWS
@@ -20,6 +22,7 @@ class Solution:
             ):
                 return False
             path.add((r, c))
+            # dfs call on all 4 adjacent blocks
             res = (
                 dfs(r + 1, c, i + 1)
                 or dfs(r - 1, c, i + 1)
@@ -33,11 +36,11 @@ class Solution:
         count = defaultdict(int, sum(map(Counter, board), Counter()))
         if count[word[0]] > count[word[-1]]:
             word = word[::-1]
-            
+        # calling dfs function     
         for r in range(ROWS):
             for c in range(COLS):
                 if dfs(r, c, 0):
                     return True
         return False
 
-    # O(n * m * 4^n)
+    # Time Complexity : O(n * m * 4^n)
