@@ -20,7 +20,6 @@ class Solution:
             prev = -1 
         # decision of Adding the element
             for i in range(startPos, len(candidates)):
-            # decision of Not adding the element and handling duplicates
                 # when we skip the value we skip the duplicate
                 if candidates[i] == prev:
                     continue

@@ -2,8 +2,7 @@
 Combination Sum : return a list of all unique combinations of candidates which sum to taregt 
 '''
 class Solution: 
-    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
-        
+    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:       
         res = []
 
         def dfs(i, cur, total):
