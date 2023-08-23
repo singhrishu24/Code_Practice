@@ -4,7 +4,7 @@ The order of the subsets does not matter.
 '''
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
-        res = []
+        res = [] # List of lists
 
         subset = []
 
