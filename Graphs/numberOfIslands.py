@@ -1,7 +1,7 @@
 '''
 Nuumber of Islands 
 map connectd horizontally or vertically i.e neighbors
-using bfs approach 
+using bfs and dfs iterative approach 
 '''
 class Solution:
     def numIslands(slef, grid: List[List[str]]) -> int:
@@ -13,7 +13,7 @@ class Solution:
         islands = 0
 
         def bfs(r, c):
-            q = deque()
+            q = deque()  # we use queue data structure for bfs
             visited.add((r, c))
             q.append((r, c))
 
