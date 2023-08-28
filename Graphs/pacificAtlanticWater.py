@@ -1,5 +1,5 @@
 '''
-Pacific Atlantic Water Flow 
+Pacific Atlantic Water Flow : should flow to both pac and atl
 '''
 
 class Solution:
@@ -19,17 +19,18 @@ class Solution:
                 return 
             
             visited.add((r, c))
+            # calling dfs for all adjacent cells 
             dfs(r+1, c, visited, heights[r][c])
             dfs(r-1, c, visited, heights[r][c])
             dfs(r, c+1, visited, heights[r][c])
             dfs(r, c-1, visited, heights[r][c])
 
         for c in range(COLS):
-            dfs(0, c, pac, heights[0][c])
-            dfs(ROWS - 1, c, atl, heights[ROWS-1][c])
+            dfs(0, c, pac, heights[0][c]) # first row -> Pacific
+            dfs(ROWS - 1, c, atl, heights[ROWS-1][c]) # last row -> Atl
         for r in range(ROWS):
-            dfs(r, 0, pac, heights[r][0])
-            dfs(r, COLS - 1, atl, heights[r][COLS-1])
+            dfs(r, 0, pac, heights[r][0]) # leftmost column -> Pacific
+            dfs(r, COLS - 1, atl, heights[r][COLS-1]) # rightmost column -> Atl
 
         res = []
         for r in range(ROWS):
